@@ -21,9 +21,9 @@ ___
 - Identified data types for each columns
 - Analyzed missing values across columns
 
-No data cleaning has been applied yet.
-The current focus is on understanding the dataset before making changes.
-
+- Handled missing values in text columns using a clear placeholder
+- Checked and confirmed no duplicate rows
+- saved a cleaned version of the dtatset for reuse 
 ---
 
 ## Tech stack

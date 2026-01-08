@@ -40,3 +40,5 @@ print("\nCleaned data saved to 'output/cleaned_data.csv'")
 # Basic Summary Statistics
 print("\nSummary Statistics:")
 print(df.describe(include='all'))
+
+print(df.isnull().any())
