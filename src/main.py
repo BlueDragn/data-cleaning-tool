@@ -17,3 +17,18 @@ print(df.dtypes)
 
 print("\nMissing Values:")
 print(df.isnull().sum())
+
+#  Cleaning Step 1:  Handle missing values in text columns
+text_columns = ['director', 'cast', 'country', 'date_added', 'rating', 'duration']
+for col in text_columns:
+    df[col] = df[col].fillna("Unknown")
+
+print("\nMissing Values after cleaning text columns:")
+print(df.isnull().sum())
+
+# Cleaning Step 2: Check for duplicates and remove them
+duplicate_count = df.duplicated().sum()
+print("\nNumber of duplicate rows:", duplicate_count)
+df = df.drop_duplicates()
+print("Duplicate rows after removal:", df.duplicated().sum())
+print("Shape after removing duplicates:", df.shape)
