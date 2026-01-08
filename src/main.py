@@ -32,3 +32,11 @@ print("\nNumber of duplicate rows:", duplicate_count)
 df = df.drop_duplicates()
 print("Duplicate rows after removal:", df.duplicated().sum())
 print("Shape after removing duplicates:", df.shape)
+
+# Final Step: Save the cleaned dataset
+df.to_csv("output/cleaned_data.csv", index=False)
+print("\nCleaned data saved to 'output/cleaned_data.csv'")
+
+# Basic Summary Statistics
+print("\nSummary Statistics:")
+print(df.describe(include='all'))
