@@ -21,13 +21,17 @@ print(df.isnull().sum())
 
 #  Cleaning Step 1:  Handle missing values in text columns
 text_columns = ['director', 'cast', 'country', 'date_added', 'rating', 'duration']
+#Drop missing rows
+df2 = df.dropna()
+print("Original shape:", df.shape)
+print("Shape after dropping rows with missing values:", df2.shape)
 
-
-for col in text_columns:
+'''for col in text_columns:
     #df[col] = df[col].fillna("Unknown")
     df[col] = df[col].fillna("Not Available")
     print("\nColumn:", col)
     print(df[col].head(10))
+    '''
 
 
 print("\nMissing Values after cleaning text columns:")
