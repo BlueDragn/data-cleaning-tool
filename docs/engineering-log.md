@@ -12,8 +12,6 @@ Next Step:
 
 ## March 09 2026
 
-Project: Project 1 – Netflix Dataset Cleaning
-
 Session Goal:
 Review the data cleaning pipeline and understand dataset structure.
 
@@ -30,3 +28,31 @@ Better understanding of NaN values and how pandas handles missing data.
 
 Next Step:
 Add visual insights and finalize the project notebook structure.
+
+### March 10
+Session Goal: Data cleaning Experiment
+
+Objective:Experimnet with different starategies for missing value handling.
+
+Work Done:
+Tested two approach for missing value handling:
+1. Replacing missing values using:
+ ```
+ df[col] = df[col].fillna("Not Available)
+ ```
+
+ 2. Remove rows containing missing values using
+ ```
+df.dropna()
+ ```
+
+ Observation:
+ - fillna() keeps all rows in the dataset while replacing missing values with a placeholder.
+
+ - dropna() removes rows containing missing values, which reduces dataset size.
+
+ Insight:  
+ For this dataset, replacing missing values is often preferable because removing rows may lead to loss of useful data.
+
+ Next Step:  
+ Continue exploring the cleaning pipeline and inspect how other columns behave after cleaning.
