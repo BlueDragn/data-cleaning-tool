@@ -4,6 +4,7 @@ import pandas as pd
 # Load the Netflix titles dataset
 df = pd.read_csv('data/netflix_titles.csv')
 
+
 # Basic Checks
 print("Shape:", df.shape)
 print("\nColumns:")
@@ -20,8 +21,14 @@ print(df.isnull().sum())
 
 #  Cleaning Step 1:  Handle missing values in text columns
 text_columns = ['director', 'cast', 'country', 'date_added', 'rating', 'duration']
+
+
 for col in text_columns:
-    df[col] = df[col].fillna("Unknown")
+    #df[col] = df[col].fillna("Unknown")
+    df[col] = df[col].fillna("Not Available")
+    print("\nColumn:", col)
+    print(df[col].head(10))
+
 
 print("\nMissing Values after cleaning text columns:")
 print(df.isnull().sum())
