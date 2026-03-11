@@ -1,5 +1,6 @@
 #load the pandas library
 import pandas as pd
+import matplotlib.pyplot as plt
 
 # Load the Netflix titles dataset
 df = pd.read_csv('data/netflix_titles.csv')
@@ -57,9 +58,27 @@ print(df.isnull().any())
 print(df.info())
 print(df.describe())
 
-# Explore key columns first step in EDA
+# Explore key columns basic EDA(Distribution Analysis)
 print("\nType:",df["type"].value_counts())
 print("\nRelease Year:",df["release_year"].value_counts())
 print("\nRating:",df["rating"].value_counts())
 print("\nduration:",df["duration"].value_counts())
 print("\nCountry:",df["country"].value_counts())
+
+#Visualize the distributions
+#1. Distribution of content types (Movie vs TV Show)
+df['type'].value_counts().plot(kind='bar')
+plt.title('Movie vs TV Show Distribution')
+plt.xlabel('Content Type')
+plt.ylabel('Count')
+plt.savefig('output/type_distribution.png')
+
+#2. Distribution of release years
+df['release_year'].value_counts().sort_index().plot()
+#3. Distribution by country
+df["country"].value_counts().head(10).plot(kind='bar')
+#4. Distribution of ratings
+df['rating'].value_counts().plot(kind='bar')
+#5. Distribution of durations (for movies and TV shows separately)
+df['duration'].value_counts().head(10).plot(kind='bar')
+
