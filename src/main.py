@@ -71,10 +71,19 @@ df['type'].value_counts().plot(kind='bar')
 plt.title('Movie vs TV Show Distribution')
 plt.xlabel('Content Type')
 plt.ylabel('Count')
+
 plt.savefig('output/type_distribution.png')
+plt.clf()
 
 #2. Distribution of release years
 df['release_year'].value_counts().sort_index().plot()
+plt.title('Netflix Content Release Trend')
+plt.xlabel('Release Year')
+plt.ylabel('Number of Titles')
+
+plt.savefig('output/release_year_distribution.png')
+plt.clf()
+
 #3. Distribution by country
 df["country"].value_counts().head(10).plot(kind='bar')
 #4. Distribution of ratings
