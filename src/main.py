@@ -21,17 +21,17 @@ print(df.isnull().sum())
 
 #  Cleaning Step 1:  Handle missing values in text columns
 text_columns = ['director', 'cast', 'country', 'date_added', 'rating', 'duration']
-#Drop missing rows
+'''Drop missing rows
 df2 = df.dropna()
 print("Original shape:", df.shape)
 print("Shape after dropping rows with missing values:", df2.shape)
+'''
 
-'''for col in text_columns:
-    #df[col] = df[col].fillna("Unknown")
-    df[col] = df[col].fillna("Not Available")
+for col in text_columns:
+    df[col] = df[col].fillna("Unknown")
     print("\nColumn:", col)
     print(df[col].head(10))
-    '''
+
 
 
 print("\nMissing Values after cleaning text columns:")
@@ -40,6 +40,7 @@ print(df.isnull().sum())
 # Cleaning Step 2: Check for duplicates and remove them
 duplicate_count = df.duplicated().sum()
 print("\nNumber of duplicate rows:", duplicate_count)
+
 df = df.drop_duplicates()
 print("Duplicate rows after removal:", df.duplicated().sum())
 print("Shape after removing duplicates:", df.shape)
@@ -53,3 +54,12 @@ print("\nSummary Statistics:")
 print(df.describe(include='all'))
 
 print(df.isnull().any())
+print(df.info())
+print(df.describe())
+
+# Explore key columns first step in EDA
+print("\nType:",df["type"].value_counts())
+print("\nRelease Year:",df["release_year"].value_counts())
+print("\nRating:",df["rating"].value_counts())
+print("\nduration:",df["duration"].value_counts())
+print("\nCountry:",df["country"].value_counts())
