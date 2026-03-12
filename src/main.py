@@ -86,15 +86,28 @@ plt.clf()
 
 #3. Distribution by country
 df["country"].value_counts().head(10).plot(kind='bar')
-plt.xticks(rotation=45)
+
+
 plt.title('Top 10 Countries by Netflix Content')
 plt.xlabel('Country')
 plt.ylabel('Number of Titles')
+plt.xticks(rotation=45)
+plt.tight_layout()
 
 plt.savefig('output/country_distribution.png')
 plt.clf()
+
+
 #4. Distribution of ratings
 df['rating'].value_counts().plot(kind='bar')
+plt.title('Distribution of Netflix Content Ratings')
+plt.xlabel('Rating')
+plt.ylabel('Count')
+plt.xticks(rotation=45)
+plt.tight_layout()
+
+plt.savefig('output/rating_distribution.png')
+plt.clf()
 #5. Distribution of durations (for movies and TV shows separately)
 df['duration'].value_counts().head(10).plot(kind='bar')
 
