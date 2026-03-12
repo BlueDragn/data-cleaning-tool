@@ -108,6 +108,15 @@ plt.tight_layout()
 
 plt.savefig('output/rating_distribution.png')
 plt.clf()
+
+
 #5. Distribution of durations (for movies and TV shows separately)
-df['duration'].value_counts().head(10).plot(kind='bar')
+df['duration'].value_counts().head(20).plot(kind='bar')
+plt.title('Top 10 Durations of Netflix Content')
+plt.xlabel('Duration')
+plt.ylabel('Count')
+plt.xticks(rotation=45)
+plt.tight_layout()
+plt.savefig('output/duration_distribution.png')
+plt.clf()
 
