@@ -56,3 +56,23 @@ df.dropna()
 
  Next Step:  
  Continue exploring the cleaning pipeline and inspect how other columns behave after cleaning.
+
+## March 11 2026
+Session Goal: Review cleaning pipeline and start the EDA phase.
+
+- Verified cleaned dataset integrity.
+- Generated distribution analysis using value_counts().
+- Created visualization for:  
+   1. Content type distribution
+   2. Release Year trend
+   3. Country distribution.
+
+- Improved chart readability with lael rotation and layout
+ adjustments.
+ - Saved charts to output directory.
+
+ Key Insight  
+ - Netflix content catlog is dominated by movies and heavily concentrated in recent years, with the United States as primary production country.
+
+ Next Step:  
+ - Generate rating and duration distribution visualization.
