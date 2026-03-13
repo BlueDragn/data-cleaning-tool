@@ -1,21 +1,21 @@
 ## March 08  2026  
-Work done:
+### Work done:
 - Reviewed data cleaning pipeline
 - Identified steps: load -> explore-> clean -> save
 
-Concepts:
+### Concepts:
 - Missing values handling
 - Duplicate detection
 
-Next Step:
+### Next Step:
 - Rebuild cleaning function independently 
 
 ## March 09 2026
 
-Session Goal:
+### Session Goal:
 Review the data cleaning pipeline and understand dataset structure.
 
-Work Done:
+### Work Done:
 - Reviewed dataset structure (rows vs columns)
 - Studied dataset inspection commands
 - Understood missing value handling using fillna()
@@ -23,18 +23,20 @@ Work Done:
 - Defined final scope of Project 1
 - Planned basic EDA and visualization layer
 
-Key Learning:
+### Key Learning:
 Better understanding of NaN values and how pandas handles missing data.
 
-Next Step:
+### Next Step:
 Add visual insights and finalize the project notebook structure.
 
-### March 10
+
+## March 10 2026
 Session Goal: Data cleaning Experiment
 
-Objective:Experimnet with different starategies for missing value handling.
+### Objective:
+- Experimnet with different starategies for missing value handling.
 
-Work Done:
+### Work Done:
 Tested two approach for missing value handling:
 1. Replacing missing values using:
  ```
@@ -46,19 +48,20 @@ Tested two approach for missing value handling:
 df.dropna()
  ```
 
- Observation:
+ ### Observation:
  - fillna() keeps all rows in the dataset while replacing missing values with a placeholder.
 
  - dropna() removes rows containing missing values, which reduces dataset size.
 
- Insight:  
+ ### Insight:  
  For this dataset, replacing missing values is often preferable because removing rows may lead to loss of useful data.
 
- Next Step:  
+ ### Next Step:  
  Continue exploring the cleaning pipeline and inspect how other columns behave after cleaning.
 
 ## March 11 2026
-Session Goal: Review cleaning pipeline and start the EDA phase.
+### Session Goal:
+ Review cleaning pipeline and start the EDA phase.
 
 - Verified cleaned dataset integrity.
 - Generated distribution analysis using value_counts().
@@ -71,8 +74,41 @@ Session Goal: Review cleaning pipeline and start the EDA phase.
  adjustments.
  - Saved charts to output directory.
 
- Key Insight  
+ ### Key Insight  
  - Netflix content catlog is dominated by movies and heavily concentrated in recent years, with the United States as primary production country.
 
- Next Step:  
+ ### Next Step:  
  - Generate rating and duration distribution visualization.
+
+
+## March 12 2026
+### Goal
+Complete the remaining EDA work.
+
+### Work done
+- Generated rating distribution visualization.
+- Generated duration distribution visualization.
+- Completed the EDA visualization section for the dataset.
+
+### Outcome
+Exploratory Data Analysis(EDA) for the Netflix dataset is completed.
+
+## March 13 2026
+### Goal
+Complete Project documentation and finalize the project.
+
+### Work done
+- Structured and wrote the project README.
+- Added dataset description and project workflow.
+- Embedded visual chart into README.
+- Created engineering note.
+- Finalized repository structure and documentation.
+
+### Outcome
+- Readme is complete.
+- Project Documentation is finalized.
+
+### Next Step
+- Improve  README
+- Add Engineering Note
+- Finish project documentation.
